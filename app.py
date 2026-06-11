@@ -16,7 +16,7 @@ def home():
         employee_html += f"<li>{emp['id']} - {emp['name']}</li>"
 
     return f"""
-    <h1>Employee Management Portal</h1>
+    <h1>Employee Management Portal - Version 2</h1>
     <h2>Employee List</h2>
     <ul>
         {employee_html}
