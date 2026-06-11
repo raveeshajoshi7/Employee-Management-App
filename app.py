@@ -10,13 +10,16 @@ employees = [
 
 @app.route("/")
 def home():
-    return """
+    employee_html = ""
+
+    for emp in employees:
+        employee_html += f"<li>{emp['id']} - {emp['name']}</li>"
+
+    return f"""
     <h1>Employee Management Portal</h1>
     <h2>Employee List</h2>
     <ul>
-        <li>John</li>
-        <li>Ravi</li>
-        <li>Priya</li>
+        {employee_html}
     </ul>
     """
 
